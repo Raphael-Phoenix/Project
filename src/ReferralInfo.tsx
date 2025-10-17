@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DefaultMessage from "./Components/NoRefMessg.js";
 import ReferralDisplay from "./Components/Referral.js";
-import { BrowserRouter } from "react-router-dom";
+
 // Define the Referral interface
 interface Referral {
   id: string;
@@ -54,23 +54,21 @@ const RefInfo: React.FC = () => {
   */
 
   return (
-    <BrowserRouter basename="/Project/">
-      <div className="RefInfo">
-        {referrals.length === 0 ? (
-          <DefaultMessage />
-        ) : (
-          referrals.map((referral) => (
-            <ReferralDisplay
-              key={referral.id}
-              name={referral.name}
-              joinDate={referral.joinDate}
-              isOnline={referral.isOnline}
-              imageUrl={referral.imageUrl}
-            />
-          ))
-        )}
-      </div>
-    </BrowserRouter>
+    <div className="RefInfo">
+      {referrals.length === 0 ? (
+        <DefaultMessage />
+      ) : (
+        referrals.map((referral) => (
+          <ReferralDisplay
+            key={referral.id}
+            name={referral.name}
+            joinDate={referral.joinDate}
+            isOnline={referral.isOnline}
+            imageUrl={referral.imageUrl}
+          />
+        ))
+      )}
+    </div>
   );
 };
 

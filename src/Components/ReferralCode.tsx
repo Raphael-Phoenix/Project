@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
+
 const ReferralCode: React.FC = () => {
   // Mock user ID (replace with auth system later)
   const userId = `user-${Math.random().toString(36).substring(2, 8)}`;
@@ -47,17 +47,15 @@ const ReferralCode: React.FC = () => {
   const copyIconSrc = "../Img/SVG/copy.svg"; // Adjust based on actual path
 
   return (
-    <BrowserRouter basename="/Project/">
-      <div className="hold" onClick={handleCopy}>
-        <p>{referralCode}</p>
-        <img src={copyIconSrc} alt="Copy referral code" className="copy" />
-        {copied && (
-          <span style={{ marginLeft: "10px" }} className="copy-feedback">
-            Copied!
-          </span>
-        )}
-      </div>
-    </BrowserRouter>
+    <div className="hold" onClick={handleCopy}>
+      <p>{referralCode}</p>
+      <img src={copyIconSrc} alt="Copy referral code" className="copy" />
+      {copied && (
+        <span style={{ marginLeft: "10px" }} className="copy-feedback">
+          Copied!
+        </span>
+      )}
+    </div>
   );
 };
 
