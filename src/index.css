@@ -109,7 +109,7 @@ h1{
 }
 /*top*/
 .container1{
-    background-image: linear-gradient(to right, rgb(242, 255, 248),  rgb(204, 255, 227));
+    background-image: linear-gradient(to right, rgba(223, 245, 255, 0.733),  rgba(174, 209, 255, 0.548));
     padding: 20px;
     border-radius: 10px;
     height: fit-content;

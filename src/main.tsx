@@ -7,15 +7,11 @@ import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("Referrals") as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter basename="/Project/">
-      <RefInfo />
-    </BrowserRouter>
+    <RefInfo />
   </React.StrictMode>
 );
 ReactDOM.createRoot(document.getElementById("code") as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter basename="/Project/">
-      <ReferralCode />
-    </BrowserRouter>
+    <ReferralCode />
   </React.StrictMode>
 );
