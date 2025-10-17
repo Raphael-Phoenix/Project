@@ -1,5 +1,4 @@
 import React from "react";
-
 import ReactDOM from "react-dom/client";
 import ReferralCode from "./Components/ReferralCode";
 import RefInfo from "./ReferralInfo";
